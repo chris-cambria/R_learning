@@ -1,0 +1,19 @@
+#visualization of data
+empid=c(1,2,3,4,5)
+age=c(30,37,45,32,50)
+gender=c(0,1,0,1,1)
+status=c(1,1,2,2,1)
+empinfo=data.frame(empid,age,gender,status)
+empinfo
+empinfo$gender=factor(empinfo$gender,labels=c("male","female"))
+empinfo$gender
+empinfo$status=factor(empinfo$status,labels=c("staff","faculty"))
+empinfo$status
+summary(empinfo)
+table1=table(empinfo$gender)
+table1
+table2=table(empinfo$status)
+table2
+plot(empinfo$age,type="l",main="age of employees",xlab="empid",ylab="age",col="blue")
+pie(table1)
+pie(table2)
