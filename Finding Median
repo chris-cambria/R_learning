@@ -1,0 +1,17 @@
+lower=c(0,10,20,30,40)
+upper=c(10,20,30,40,50)
+freq=c(5,8,12,7,3)
+h=upper[1]-lower[1]
+h
+N=sum(freq)
+N
+cf=cumsum(freq)
+Median_class=which(cf>=(N/2))[1]
+Median_class
+f=freq[Median_class]
+f
+l=lower[Median_class]
+
+c=if (Median_class==1) or else cf[Median_class-1]
+Median=l+(h/f)*((N/2)-c)
+Median
